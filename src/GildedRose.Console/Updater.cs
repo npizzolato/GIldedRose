@@ -18,6 +18,13 @@ namespace GildedRose
 
         public static void UpdateItem(Item item)
         {
+            if (item.Name == "Aged Brie")
+            {
+                var updater = new BrieUpdater();
+                updater.UpdateItem(item);
+                return;
+            }
+
             if (item.Name != "Aged Brie" && item.Name != "Backstage passes to a TAFKAL80ETC concert")
             {
                 if (item.Quality > 0)

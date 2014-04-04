@@ -64,6 +64,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AgedBrieTests.cs" />
+    <Compile Include="BackstagePassesTests.cs" />
     <Compile Include="GenericItemTests.cs" />
     <Compile Include="ItemCreator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
