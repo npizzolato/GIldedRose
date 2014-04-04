@@ -6,7 +6,7 @@
     [TestFixture]
     public class BackstagePassesTests
     {
-        private const string Pass = "Backstage passes to a TAFKAL80ETC concert";
+        private const string Pass = "Backstage pass";
 
         [Test]
         public void PassesSellinDecreaseByOne()
