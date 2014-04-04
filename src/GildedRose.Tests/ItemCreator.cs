@@ -18,6 +18,12 @@ namespace GildedRose.Tests
             };
         }
 
+        public static Item WithName(this Item item, string name)
+        {
+            item.Name = name;
+            return item;
+        }
+
         public static Item WithSellIn(this Item item, int sellin)
         {
             item.SellIn = sellin;
@@ -27,6 +33,12 @@ namespace GildedRose.Tests
         public static Item WithQuality(this Item item, int quality)
         {
             item.Quality = quality;
+            return item;
+        }
+
+        public static Item Expired(this Item item)
+        {
+            item.SellIn = 0;
             return item;
         }
     }
