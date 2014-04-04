@@ -1,11 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace GildedRose
+﻿namespace GildedRose
 {
+    using System.Collections.Generic;
+
     public static class Updater
     { 
         public static void UpdateQuality(IList<Item> items)

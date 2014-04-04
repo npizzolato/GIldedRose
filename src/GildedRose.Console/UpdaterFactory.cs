@@ -1,11 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace GildedRose
+﻿namespace GildedRose
 {
+    using System;
+    using GildedRose.Updaters;
+
     public static class UpdaterFactory
     {
         public static IUpdater CreateUpdater(Item item)

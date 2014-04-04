@@ -1,7 +1,7 @@
-﻿using System.Collections.Generic;
-
-namespace GildedRose
+﻿namespace GildedRose
 {
+    using System.Collections.Generic;
+
     public class Program
     {
         IList<Item> Items;
