@@ -4,11 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GildedRose.Console
+namespace GildedRose
 {
-    public class Updater
+    public static class Updater
     { 
-        public void UpdateQuality(IList<Item> items)
+        public static void UpdateQuality(IList<Item> items)
         {
             for (var i = 0; i < items.Count; i++)
             {
@@ -16,7 +16,7 @@ namespace GildedRose.Console
             }
         }
 
-        public void UpdateItem(Item item)
+        public static void UpdateItem(Item item)
         {
             if (item.Name != "Aged Brie" && item.Name != "Backstage passes to a TAFKAL80ETC concert")
             {

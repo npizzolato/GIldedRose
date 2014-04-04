@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace GildedRose.Console
+namespace GildedRose
 {
     public class Program
     {
@@ -28,8 +28,7 @@ namespace GildedRose.Console
 
                           };
 
-            Updater updater = new Updater();
-            updater.UpdateQuality(app.Items);
+            Updater.UpdateQuality(app.Items);
 
             System.Console.ReadKey();
         }
