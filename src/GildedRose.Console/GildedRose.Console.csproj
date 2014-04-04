@@ -46,6 +46,7 @@
     <Compile Include="GenericUpdater.cs" />
     <Compile Include="Item.cs" />
     <Compile Include="IUpdater.cs" />
+    <Compile Include="NoOpUpdater.cs" />
     <Compile Include="PassUpdater.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

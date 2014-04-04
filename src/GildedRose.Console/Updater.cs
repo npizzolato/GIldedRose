@@ -30,6 +30,12 @@ namespace GildedRose
                 updater.UpdateItem(item);
                 return;
             }
+            else if (item.Name.Equals("Sulfuras, Hand of Ragnaros", StringComparison.OrdinalIgnoreCase))
+            {
+                var updater = new NoOpUpdater();
+                updater.UpdateItem(item);
+                return;
+            }
 
             if (item.Name != "Aged Brie" && item.Name != "Backstage passes to a TAFKAL80ETC concert")
             {
