@@ -9,15 +9,17 @@
         [Test]
         public void SellInDateShouldDecreaseByOne()
         {
-            Item item = new Item()
-            {
-                SellIn = 5,
-                Name = "Random item",
-                Quality = 5,
-            };
-
+            Item item = ItemCreator.Create().WithSellIn(5);
             Updater.UpdateItem(item);
             item.SellIn.Should().Be(4);
+        }
+
+        [Test]
+        public void UnexpiredItemShouldHaveQualityDecreaseByOne()
+        {
+            Item item = ItemCreator.Create().WithQuality(3);
+            Updater.UpdateItem(item);
+            item.Quality.Should().Be(2);
         }
     }
 }
