@@ -21,6 +21,10 @@
             {
                 updater = new NoOpUpdater();
             }
+            else if (item.Name.StartsWith("Conjured", StringComparison.OrdinalIgnoreCase))
+            {
+                updater = new ConjuredUpdater();
+            }
             else
             {
                 updater = new GenericUpdater();

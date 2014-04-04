@@ -43,6 +43,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Updaters\BrieUpdater.cs" />
+    <Compile Include="Updaters\ConjuredUpdater.cs" />
     <Compile Include="Updaters\GenericUpdater.cs" />
     <Compile Include="Item.cs" />
     <Compile Include="IUpdater.cs" />
