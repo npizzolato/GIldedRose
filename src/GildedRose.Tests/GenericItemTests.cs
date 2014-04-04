@@ -21,5 +21,21 @@
             Updater.UpdateItem(item);
             item.Quality.Should().Be(2);
         }
+
+        [Test]
+        public void ExpiredItemShouldHaveQualityDecreaseByTwo()
+        {
+            Item item = ItemCreator.Create().Expired().WithQuality(4);
+            Updater.UpdateItem(item);
+            item.Quality.Should().Be(2);
+        }
+
+        [Test]
+        public void QualityCannotGoNegative()
+        {
+            Item item = ItemCreator.Create().WithQuality(0);
+            Updater.UpdateItem(item);
+            item.Quality.Should().Be(0);
+        }
     }
 }
