@@ -18,30 +18,9 @@ namespace GildedRose
 
         public static void UpdateItem(Item item)
         {
-            if (item.Name == "Aged Brie")
-            {
-                var updater = new BrieUpdater();
-                updater.UpdateItem(item);
-                return;
-            }
-            else if (item.Name.StartsWith("Backstage pass", StringComparison.OrdinalIgnoreCase))
-            {
-                var updater = new PassUpdater();
-                updater.UpdateItem(item);
-                return;
-            }
-            else if (item.Name.Equals("Sulfuras, Hand of Ragnaros", StringComparison.OrdinalIgnoreCase))
-            {
-                var updater = new NoOpUpdater();
-                updater.UpdateItem(item);
-                return;
-            }
-            else
-            {
-                var updater = new GenericUpdater();
-                updater.UpdateItem(item);
-                return;
-            }
+            IUpdater updater = UpdaterFactory.CreateUpdater(item);
+            updater.UpdateItem(item);
+            return;
         }
     }
 }
