@@ -24,6 +24,12 @@ namespace GildedRose
                 updater.UpdateItem(item);
                 return;
             }
+            else if (item.Name.StartsWith("Backstage pass", StringComparison.OrdinalIgnoreCase))
+            {
+                var updater = new PassUpdater();
+                updater.UpdateItem(item);
+                return;
+            }
 
             if (item.Name != "Aged Brie" && item.Name != "Backstage passes to a TAFKAL80ETC concert")
             {

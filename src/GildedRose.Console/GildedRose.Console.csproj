@@ -8,7 +8,7 @@
     <ProjectGuid>{F928CC23-1B56-46FD-B1F2-FEE28F2B424C}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>GildedRose.Console</RootNamespace>
+    <RootNamespace>GildedRose</RootNamespace>
     <AssemblyName>GildedRose.Console</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <TargetFrameworkProfile>
@@ -43,8 +43,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BrieUpdater.cs" />
+    <Compile Include="GenericUpdater.cs" />
     <Compile Include="Item.cs" />
     <Compile Include="IUpdater.cs" />
+    <Compile Include="PassUpdater.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Updater.cs" />

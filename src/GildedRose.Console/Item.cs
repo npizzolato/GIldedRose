@@ -14,4 +14,12 @@ namespace GildedRose
 
         public int Quality { get; set; }
     }
+
+    public static class ItemExtensions
+    {
+        public static bool IsExpired(this Item item)
+        {
+            return item.SellIn <= 0;
+        }
+    }
 }
