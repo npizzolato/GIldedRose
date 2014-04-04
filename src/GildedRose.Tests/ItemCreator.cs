@@ -30,9 +30,9 @@
             return item;
         }
 
-        public static Item Expired(this Item item)
+        public static Item WhichIsExpired(this Item item)
         {
-            item.SellIn = 0;
+            item.SellIn = ItemConstants.ExpiredSellin;
             return item;
         }
     }

@@ -12,7 +12,7 @@
         public void SulfurasSellinShouldNotDecrease()
         {
             const int Sellin = 10;
-            Item item = ItemCreator.Create().WithName(Sulfuras).WithSellIn(Sellin);
+            Item item = CreateSulfuras().WithSellIn(Sellin);
             Updater.UpdateItem(item);
             item.SellIn.Should().Be(Sellin);
         }
@@ -21,7 +21,7 @@
         public void SulfurasQualityShouldNotChange()
         {
             const int Quality = 20;
-            Item item = ItemCreator.Create().WithName(Sulfuras).WithQuality(Quality);
+            Item item = CreateSulfuras().WithQuality(Quality);
             Updater.UpdateItem(item);
             item.Quality.Should().Be(Quality);
         }
@@ -30,9 +30,14 @@
         public void SulfurasQualityCanBeEighty()
         {
             const int Quality = 80;
-            Item item = ItemCreator.Create().WithName(Sulfuras).WithQuality(Quality);
+            Item item = CreateSulfuras().WithQuality(Quality);
             Updater.UpdateItem(item);
             item.Quality.Should().Be(Quality);
+        }
+
+        private static Item CreateSulfuras()
+        {
+            return ItemCreator.Create().WithName(Sulfuras);
         }
     }
 }

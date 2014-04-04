@@ -25,7 +25,7 @@
         [Test]
         public void ExpiredItemShouldHaveQualityDecreaseByTwo()
         {
-            Item item = ItemCreator.Create().Expired().WithQuality(4);
+            Item item = ItemCreator.Create().WhichIsExpired().WithQuality(4);
             Updater.UpdateItem(item);
             item.Quality.Should().Be(2);
         }
