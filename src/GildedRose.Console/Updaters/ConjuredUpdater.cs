@@ -1,12 +1,14 @@
 ﻿namespace GildedRose.Updaters
 {
+    using System;
+
     public class ConjuredUpdater : IUpdater
     {
         public void UpdateItem(Item item)
         {
-            item.Quality -= item.IsExpired() ? 4 : 2;
+            item.Quality -= item.GetQualityChange() * 2;
             item.SellIn -= 1;
-            item.Quality = item.Quality < 0 ? 0 : item.Quality;
+            item.Quality = Math.Max(ItemConstants.MinimumQuality, item.Quality);
         }
     }
 }

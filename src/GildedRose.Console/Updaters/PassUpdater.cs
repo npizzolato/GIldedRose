@@ -18,11 +18,10 @@
             }
             else
             {
-                item.Quality = 0;
+                item.Quality = ItemConstants.MinimumQuality;
             }
 
             item.SellIn -= 1;
-
         }
     }
 }

@@ -6,9 +6,9 @@
     { 
         public static void UpdateQuality(IList<Item> items)
         {
-            for (var i = 0; i < items.Count; i++)
+            foreach (Item item in items)
             {
-                UpdateItem(items[0]);
+                UpdateItem(item);
             }
         }
 
